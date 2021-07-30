@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/trot_nav"
+    app:startDestination="@id/number1Fragment">
+
+    <fragment
+        android:id="@+id/number1Fragment"
+        android:name="com.hyeonseungson.trot_list.Number1Fragment"
+        android:label="fragment_number1"
+        tools:layout="@layout/fragment_number1" >
+        <action
+            android:id="@+id/action_number1Fragment_to_number2Fragment"
+            app:destination="@id/number2Fragment" />
+        <action
+            android:id="@+id/action_number1Fragment_to_number3Fragment"
+            app:destination="@id/number3Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/number2Fragment"
+        android:name="com.hyeonseungson.trot_list.Number2Fragment"
+        android:label="fragment_number2"
+        tools:layout="@layout/fragment_number2" >
+        <action
+            android:id="@+id/action_number2Fragment_to_number1Fragment"
+            app:destination="@id/number1Fragment" />
+        <action
+            android:id="@+id/action_number2Fragment_to_number3Fragment"
+            app:destination="@id/number3Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/number3Fragment"
+        android:name="com.hyeonseungson.trot_list.Number3Fragment"
+        android:label="fragment_number3"
+        tools:layout="@layout/fragment_number3" >
+        <action
+            android:id="@+id/action_number3Fragment_to_number2Fragment"
+            app:destination="@id/number2Fragment" />
+        <action
+            android:id="@+id/action_number3Fragment_to_number1Fragment"
+            app:destination="@id/number1Fragment" />
+    </fragment>
+</navigation>
