@@ -13,7 +13,7 @@ class RVAdapter(val items: MutableList<String>) : RecyclerView.Adapter<RVAdapter
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RVAdapter.ViewHolder {
 
         val view = LayoutInflater.from(parent.context).inflate(R.layout.rv_item, parent, false)
-
+        Log.d ("view??", view.toString())
         return ViewHolder(view)
     }
 
@@ -29,6 +29,8 @@ class RVAdapter(val items: MutableList<String>) : RecyclerView.Adapter<RVAdapter
     inner class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
 
         fun bindItems(item : String) {
+
+            Log.d ("itemView?", itemView.toString())
 
             val rv_text = itemView.findViewById<TextView>(R.id.rvNumberId)
             rv_text.text = item

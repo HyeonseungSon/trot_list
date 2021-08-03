@@ -47,6 +47,8 @@ class Number1Fragment : Fragment() {
         val rv = view.findViewById<RecyclerView>(R.id.numberRv1)
         val rvAdapter = RVAdapter(items)
 
+        Log.d("rvAdapter : ", rvAdapter.toString())
+
         rv.adapter = rvAdapter
 
         rv.layoutManager = LinearLayoutManager(context)
